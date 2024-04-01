@@ -1,0 +1,82 @@
+site_name: ToDAM - Template
+
+site_description: Template for LLM Development, Incorporating Relevant Documentation.
+
+site_author: 1chooo(Hugo ChunHo Lin)
+
+site_url: https://1chooo.github.io/ai-model-with-docs-template/
+
+repo_url: https://github.com/TODAM-tw/ai-model-with-docs-template
+
+copyright: Copyright &copy; 2024 TODAM-tw
+
+theme:
+    palette:
+        - scheme: default
+          primary: blue grey
+          accent: indigo
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to dark mode
+        - scheme: slate
+          primary: grey
+          accent: indigo
+          toggle:
+              icon: material/weather-night
+              name: Switch to light mode
+    name: material
+    
+    icon:
+        repo: fontawesome/brands/github
+    features:
+        - navigation.instant
+        # - navigation.top
+        - navigation.tabs
+        - navigation.sections
+        - navigation.indexes
+        - search.highlight
+        - navigation.expand
+        - navigation.path
+        - navigation.footer
+
+    icon:
+        logo: material/library-outline
+
+plugins:
+    - search
+    - mkdocstrings
+    - git-revision-date
+    # - blog
+    - mkdocs-jupyter:
+        include_source: True
+        execute: False  # if set to True, it will execute the notebook before converting it to html
+        # ignore: [""]
+        # validate_nb: True
+        #   ignore_h1_titles: True
+        #   execute_ignore: "*.ipynb"
+
+markdown_extensions:
+    - attr_list
+    - pymdownx.superfences
+    - pymdownx.highlight:
+        linenums: true
+    - toc:
+        permalink: true
+
+
+extra:
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/TODAM-tw
+    # analytics:
+    #     provider: google
+    #     property: UA-XXXXXXXXX-X
+nav:
+    - Overview: index.md
+    - Versions: 
+        - versions/v0.0.1.md
+        - versions/v0.0.2.md
+    - How To: howto.md
+    - LICENSE: LICENSE.md
+    - Reference: reference.md
+    - Report Issues: https://github.com/TODAM-tw/ai-model-with-docs-template/issues
